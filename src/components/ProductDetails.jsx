@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactComponent as Minus } from '../assets/images/icon-minus.svg';
 import { ReactComponent as Plus } from '../assets/images/icon-plus.svg';
-import { ReactComponent as CartLogo } from '../assets/images/icon-cart.svg';
+import WrappedCart from './WrappedCart';
 function ProductDetails() {
   return (
     <section className="p-4 space-y-4">
@@ -34,7 +34,7 @@ function ProductDetails() {
         </button>
       </div>
       <button className="bg-primary-orange shadow-xl shadow-primary-pale text-neutral-white font-bold p-4 w-full rounded-lg flex gap-4 justify-center">
-        <CartLogo fill={'#ffffff'} />
+        <WrappedCart fill={'#ffffff'} />
         Add to Cart
       </button>
     </section>
