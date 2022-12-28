@@ -9,7 +9,7 @@ function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="flex flex-row p-3 bg-slate-200 item-center gap-4">
+    <header className="flex flex-row p-3 bg-slate-200 item-center gap-4 relative">
       <div className="flex items-center gap-4">
         <button className="sm:hidden" onClick={() => setMenuOpen(true)}>
           <MenuLogo />
