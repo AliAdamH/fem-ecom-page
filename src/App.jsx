@@ -4,13 +4,13 @@ import ProductDetails from './components/ProductDetails';
 
 function App() {
   return (
-    <>
+    <div className="max-w-6xl mx-auto">
       <NavBar />
-      <main>
+      <main className="flex flex-col sm:flex-row sm:py-16 sm:gap-8 justify-evenly">
         <Carousel />
         <ProductDetails />
       </main>
-    </>
+    </div>
   );
 }
 
