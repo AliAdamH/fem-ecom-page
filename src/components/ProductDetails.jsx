@@ -66,17 +66,23 @@ function ProductDetails() {
           className="flex  items-center justify-between bg-neutral-lightGrayBlue p-3 rounded-md font-bold sm:gap-16 sm:p-2"
           id="quantity"
         >
-          <button onClick={decreaseQuantity} className="text-primary-orange">
+          <button
+            onClick={decreaseQuantity}
+            className="text-primary-orange hover:opacity-60 transition-opacity"
+          >
             <Minus />
           </button>
           <span>{quantity}</span>
-          <button onClick={increaseQuantity} className="text-primary-orange">
+          <button
+            onClick={increaseQuantity}
+            className="text-primary-orange hover:opacity-60 transition-opacity"
+          >
             <Plus />
           </button>
         </div>
         <button
           onClick={addToCart}
-          className="bg-primary-orange shadow-xl shadow-primary-pale text-neutral-white font-bold p-4 w-full sm:flex-1 sm:w-auto rounded-lg flex gap-4 justify-center"
+          className="bg-primary-orange shadow-xl shadow-primary-pale text-neutral-white font-bold p-4 w-full sm:flex-1 sm:w-auto rounded-lg flex gap-4 justify-center hover:opacity-60 hover:-translate-y-2 transition-transform"
         >
           <WrappedCart fill={'#ffffff'} />
           Add to Cart

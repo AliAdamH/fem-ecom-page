@@ -26,9 +26,11 @@ function Cart() {
     <>
       <button className="relative" onClick={() => toggleCart()}>
         <WrappedCart fill={'#000000'} />
-        <span className="absolute -right-2 -top-1 rounded-full w-4 h-4 bg-primary-orange text-[12px]  text-neutral-white">
-          {itemCount > 9 ? '9+' : itemCount}
-        </span>
+        {itemCount !== 0 && (
+          <span className="absolute -right-2 -top-2 rounded-full w-5 h-4 bg-primary-orange text-[12px]  text-neutral-white">
+            {itemCount > 9 ? '9+' : itemCount}
+          </span>
+        )}
       </button>
       {openCart ? (
         <div className="absolute p-4 top-12  right-0 w-full md:w-96 z-10">

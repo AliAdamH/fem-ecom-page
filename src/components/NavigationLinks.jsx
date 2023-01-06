@@ -21,10 +21,17 @@ function NavigationLinks({ opened, close }) {
           </nav>
         </div>
       ) : (
-        <nav className="hidden sm:flex sm:items-center">
-          <ul className="flex flex-col gap-4 sm:flex-row text-neutral-darkBlue font-bold sm:font-normal">
+        <nav className="hidden sm:flex">
+          <ul className="flex flex-col gap-4 sm:flex-row text-neutral-darkGrayBlue font-bold sm:font-normal">
             {LINKS.map((link, index) => {
-              return <li key={index}>{link}</li>;
+              return (
+                <li
+                  key={index}
+                  className="hover:text-neutral-darkBlue relative flex items-center before:bottom-0 before:p-[2px] before:w-full before:absolute hover:before:bg-primary-orange transition-colors"
+                >
+                  <button> {link}</button>
+                </li>
+              );
             })}
           </ul>
         </nav>
