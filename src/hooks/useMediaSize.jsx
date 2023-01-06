@@ -11,10 +11,10 @@ export const useMediaSize = ({ value }) => {
   const updateOnResize = () => setMatchSize(mediaObject.current.matches);
 
   React.useEffect(() => {
+    const MQLOBJECT = mediaObject.current;
     const handleWindowResize = debounce(updateOnResize, 300);
-    mediaObject.current.addEventListener('change', handleWindowResize);
-    return () =>
-      mediaObject.current.removeEventListener('change', handleWindowResize);
+    MQLOBJECT.addEventListener('change', handleWindowResize);
+    return () => MQLOBJECT.removeEventListener('change', handleWindowResize);
   }, []);
 
   // Return the width so we can use it in our components
