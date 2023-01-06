@@ -15,7 +15,7 @@ const IMAGE_THUMBNAILS = [
   thirdImageThumbnail,
   fourthImageThumbnail,
 ];
-function DesktopCarousel() {
+function DesktopCarousel({ openLightBox }) {
   const [currentImage, setCurrentImage] = useState(IMAGE_LINKS[0]);
   const [currentThumbnail, setCurrentThumbnail] = useState(IMAGE_THUMBNAILS[0]);
 
@@ -34,6 +34,7 @@ function DesktopCarousel() {
     <div className="flex flex-col max-w-[380px] gap-8">
       <div className="">
         <img
+          onClick={openLightBox}
           alt="Sneaker"
           src={currentImage}
           className="object-cover rounded-xl"
