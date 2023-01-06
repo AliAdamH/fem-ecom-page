@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { ReactComponent as PreviousIcon } from '../assets/images/icon-previous.svg';
 import { ReactComponent as NextIcon } from '../assets/images/icon-next.svg';
-import firstImage from '../assets/images/image-product-1.jpg';
-import secondImage from '../assets/images/image-product-2.jpg';
-import thirdImage from '../assets/images/image-product-3.jpg';
-import fourthImage from '../assets/images/image-product-4.jpg';
+import { IMAGE_LINKS, IMAGE_LINKS_BOUNDARY } from '../utils/ImageExports';
 
-const IMAGE_LINKS = [firstImage, secondImage, thirdImage, fourthImage];
-const IMAGE_LINKS_BOUNDARY = IMAGE_LINKS.length - 1;
 export default function MobileCarousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [currentImage, setCurrentImage] = useState(firstImage);
+  const [currentImage, setCurrentImage] = useState(IMAGE_LINKS[0]);
 
   useEffect(() => {
     setCurrentImage(IMAGE_LINKS[currentImageIndex]);

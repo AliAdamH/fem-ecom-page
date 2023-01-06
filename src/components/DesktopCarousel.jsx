@@ -1,22 +1,11 @@
 import React, { useState } from 'react';
-import firstImage from '../assets/images/image-product-1.jpg';
-import secondImage from '../assets/images/image-product-2.jpg';
-import thirdImage from '../assets/images/image-product-3.jpg';
-import fourthImage from '../assets/images/image-product-4.jpg';
-import firstImageThumbnail from '../assets/images/image-product-1-thumbnail.jpg';
-import secondImageThumbnail from '../assets/images/image-product-2-thumbnail.jpg';
-import thirdImageThumbnail from '../assets/images/image-product-3-thumbnail.jpg';
-import fourthImageThumbnail from '../assets/images/image-product-4-thumbnail.jpg';
 import { ReactComponent as PreviousIcon } from '../assets/images/icon-previous.svg';
 import { ReactComponent as NextIcon } from '../assets/images/icon-next.svg';
-
-const IMAGE_LINKS = [firstImage, secondImage, thirdImage, fourthImage];
-const IMAGE_THUMBNAILS = [
-  firstImageThumbnail,
-  secondImageThumbnail,
-  thirdImageThumbnail,
-  fourthImageThumbnail,
-];
+import {
+  IMAGE_LINKS,
+  IMAGE_THUMBNAILS,
+  IMAGE_LINKS_BOUNDARY,
+} from '../utils/ImageExports';
 function DesktopCarousel({ openLightBox, withToggles = false }) {
   const [currentImage, setCurrentImage] = useState(0);
   const [currentThumbnail, setCurrentThumbnail] = useState(0);
@@ -34,7 +23,7 @@ function DesktopCarousel({ openLightBox, withToggles = false }) {
 
   const changeWithToggles = (value) => {
     if (currentImage === 0 && value === -1) return;
-    if (currentImage === IMAGE_LINKS.length - 1 && value === 1) return;
+    if (currentImage === IMAGE_LINKS_BOUNDARY && value === 1) return;
     setCurrentImage((prev) => prev + value);
     setCurrentThumbnail((prev) => prev + value);
   };
