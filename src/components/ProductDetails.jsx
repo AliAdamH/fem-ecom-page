@@ -44,7 +44,7 @@ function ProductDetails() {
   };
 
   return (
-    <section className="p-4 space-y-4 max-w-[480px] sm:py-16 sm:space-y-8">
+    <section className="p-4 space-y-4 max-w-[480px] sm:py-16 sm:space-y-8 mx-auto lg:mx-0">
       <span className="text-primary-orange font-bold">SNEAKER COMPANY</span>
       <h1 className="text-3xl font-extrabold">Fall Limited Edition Sneakers</h1>
       <p className="text-neutral-darkGrayBlue">

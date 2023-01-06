@@ -26,7 +26,7 @@ export default function MobileCarousel() {
     <div className="relative">
       <button
         onClick={() => handleImageChange(-1)}
-        className="absolute left-4 top-1/3 bg-neutral-white rounded-full p-1 w-8 h-8 flex items-center justify-center"
+        className="absolute left-4 top-[45%] bg-neutral-white rounded-full p-1 w-8 h-8 flex items-center justify-center"
       >
         <span className="sr-only">Previous</span>
         <PreviousIcon className="scale-75" />
@@ -34,7 +34,7 @@ export default function MobileCarousel() {
       <img alt="Sneaker" src={currentImage} className="object-cover" />
       <button
         onClick={() => handleImageChange(1)}
-        className="absolute right-4 top-1/3 bg-neutral-white rounded-full p-1 w-8 h-8 flex items-center justify-center"
+        className="absolute right-4 top-[45%] bg-neutral-white rounded-full p-1 w-8 h-8 flex items-center justify-center"
       >
         <span className="sr-only">Next</span>
         <NextIcon className="scale-75" />
