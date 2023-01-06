@@ -3,7 +3,6 @@ import { useMediaSize } from '../hooks/useMediaSize';
 import DesktopCarousel from './DesktopCarousel';
 import MobileCarousel from './MobileCarousel';
 import Modal from 'react-modal';
-import { ReactComponent as CloseIcon } from '../assets/images/icon-close.svg';
 Modal.setAppElement('#root');
 
 function Carousel() {
@@ -34,7 +33,7 @@ function Carousel() {
             &times;
           </button>
         </div>
-        <DesktopCarousel />
+        <DesktopCarousel withToggles={true} />
       </Modal>
     </>
   ) : (
