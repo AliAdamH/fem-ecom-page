@@ -52,18 +52,18 @@ function ProductDetails() {
         Featuring a durable rubber outer sole, they'll withstand everything the
         weather can offer.
       </p>
-      <div id="pricing" className="flex items-center">
+      <div id="pricing" className="flex items-center sm:flex-wrap">
         <h3 className="text-3xl font-bold">${itemExample.price}</h3>
         <span className="ml-4 rounded-md py-1 px-2 text-sm font-bold bg-primary-pale text-primary-orange">
           {itemExample.discount}%
         </span>
-        <span className="ml-auto text-sm text-neutral-darkGrayBlue line-through">
+        <span className="sm:py-2 font-bold sm:w-full ml-auto text-sm text-neutral-darkGrayBlue line-through">
           ${itemExample.originalPrice}
         </span>
       </div>
-      <div className="flex flex-col sm:flex-row sm:gap-4">
+      <div className="flex flex-col sm:flex-row gap-4">
         <div
-          className="flex  items-center justify-between bg-neutral-lightGrayBlue p-3 rounded-md font-bold sm:gap-16 sm:p-2"
+          className="flex sm:w-1/3 items-center justify-between bg-neutral-lightGrayBlue p-3 rounded-md font-bold sm:gap-4 sm:py-2 sm:px-4"
           id="quantity"
         >
           <button
