@@ -21,6 +21,11 @@ function Carousel() {
             border: 'none',
             margin: '0 auto',
             overflow: 'hidden',
+            padding: '0 1rem',
+            left: '0',
+            right: '0',
+            top: '0',
+            bottom: '0',
           },
         }}
         onRequestClose={() => setOpenModal(false)}
